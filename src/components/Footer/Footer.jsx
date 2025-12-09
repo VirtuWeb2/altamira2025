@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Logo e Texto - Direita */}
         </div>
       
-          <a id="botaoHome" href="/" className="botaoHome" ><img src="/images/Logo.png" alt=""></img></a>
+          <a id="botaoHome" href="/" className="botaoHome" ><img src="../images/Logo.png" alt=""></img></a>
       </footer>
 
       <div className="legal">
@@ -68,7 +68,7 @@ const Footer = () => {
         >
           <div className="footer-links">
             <div className="logoFooter">
-             <a href="/"><img src="/images/Logo.png" alt="Logo" /></a>
+             <a href="/"><img src="../images/Logo.png" alt="Logo" /></a>
           
             </div>
             <div className="buttons">
