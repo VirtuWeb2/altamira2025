@@ -107,9 +107,9 @@ const News = ({ news, isLoading, title, flex }) => {
                         }}
                       >
                         <img
-                          src="/icons/facebook.svg"
-                          width={24}
-                          height={24}
+                          src="/icons/face.svg"
+                          width={28}
+                          height={28}
                           alt=""
                         />
                       </button>
@@ -126,7 +126,7 @@ const News = ({ news, isLoading, title, flex }) => {
                         }}
                       >
                         <img
-                          src="/icons/whatsapp.svg"
+                          src="/icons/wpp.svg"
                           width={24}
                           height={24}
                           alt=""
@@ -141,7 +141,7 @@ const News = ({ news, isLoading, title, flex }) => {
                         <MessageCircle />
                       </button> */}
                       <button
-                        className="text-neutral-600"
+                        className="text-neutral-100"
                         onClick={(e) => {
                           e.preventDefault();
                           navigator.share({

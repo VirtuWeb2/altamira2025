@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import App from "./routes/MainRoutes.jsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { UserProvider } from "./context/UserContext.jsx";
+import "@fortawesome/fontawesome-free/css/all.css";
 const client = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } },
 });

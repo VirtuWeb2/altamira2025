@@ -1,10 +1,27 @@
 import { Link } from "react-router-dom";
 import "./hero.css"
 import dayjs from "@utils/dayjs"
+import axios from "axios";
 import gsap from "gsap"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Share2 } from "lucide-react";
 const Hero = ({ news, isLoading }) => {
+  const [ads,setAds] = useState([]);
+  useEffect(() => {
+    const getAds = async () => {
+      try {
+        const res = await axios.get("https://api-sites-en.vercel.app/ad");
+        const filteredAds = res.data.filter(
+          (ad) => ad.position === "banner hero"
+        );
+        setAds(filteredAds);
+      } catch (err) {
+        console.error("Erro ao buscar ads:", err);
+      }
+    };
+
+    getAds();
+  }, []);
 
   useEffect(()=>{
     if (!isLoading) {
@@ -82,7 +99,7 @@ const Hero = ({ news, isLoading }) => {
                     <p
                       className="text-[2rem] leading-9"
                       dangerouslySetInnerHTML={{
-                        __html: n.desc.substring(0, 160) + "...",
+                        __html: n.desc.substring(0, 375) + `<span  class="vermais">...ver mais</span>`,
                       }}
                     ></p>
                   )}
@@ -157,7 +174,20 @@ const Hero = ({ news, isLoading }) => {
               </Link>
             );
           })}
+        </div> <section className="hero-ads">
+        <div className="containerAds">
+          {ads.map((ad) => (
+            <a
+              href={ad.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={ad.id}
+            >
+              <img src={ad.cover} alt={ad.title} className="hero-ad-banner" />
+            </a>
+          ))}
         </div>
+      </section>
         {/* <div className="grid-2 ">
           {news.slice(4, 7).map((n, index) => {
             return (
