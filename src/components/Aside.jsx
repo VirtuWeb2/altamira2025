@@ -113,7 +113,7 @@ const Aside = ({ tvPosts, uniqueNews }) => {
         </div>
         
           <a
-          href="https://www.facebook.com/enoticiapara?locale=pt_BR"
+          href="https://www.facebook.com/enoticiaaltamira"
           target="_blank"
           className="bg-blue-900 flex gap-[1rem] text-[1.6rem] font-semibold p-[1rem] rounded-md items-center text-white mt-[1rem] socBox facebook"
         >
@@ -132,7 +132,7 @@ const Aside = ({ tvPosts, uniqueNews }) => {
         </a>
         
           <a
-          href="https://www.facebook.com/groups/enoticiapara?locale=pt_BR"
+          href="https://www.facebook.com/groups/7611167028948735?locale=pt_BR"
           target="_blank"
           className="bg-blue-900 from-pink-500 to-orange-500 flex gap-[1rem] text-[1.6rem] font-semibold p-[1rem] rounded-md items-center text-white mt-[1rem] socBox facebook"
         >
